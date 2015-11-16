@@ -28,7 +28,9 @@ From the command line:
 2. Navigate to the theme directory, then run `npm install`
 3. Run `bower install`
 4. Run `composer update` to install the Timber plugin
+5. Run `gulp`
 5. Run `gulp watch`
+6. Go to Plugins in wp-admin and activate Timber
 
 You now have all the necessary dependencies to run the build process.
 
