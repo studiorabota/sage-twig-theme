@@ -1,0 +1,17 @@
+{% extends "templates/base.twig" %}
+
+{% block content %}
+
+    {% for post in posts %}
+
+        {% include "templates/content.twig" with {post: post}  %}
+
+    {% endfor %}
+
+{% endblock %}
+
+{% block sidebar %}
+
+    {% include "templates/sidebar.twig" %}
+
+{% endblock %}
