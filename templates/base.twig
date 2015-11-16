@@ -9,10 +9,12 @@
 
         <div class="wrap container" role="document">
             <div class="content row">
-                <main class="main">
+                <main class="col-md-8">
                     {% block content %}{% endblock %}
                 </main>
-                {% block sidebar %}{% endblock %}
+                <aside class="col-md-4">
+                    {% block sidebar %}{% endblock %}
+                </aside>
             </div>
         </div>
 

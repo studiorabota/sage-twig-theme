@@ -1,10 +1,4 @@
 <?php
-/**
- * Template Name: Custom Template
- */
-?>
+$context = Timber::get_context();
 
-<?php while (have_posts()) : the_post(); ?>
-  <?php get_template_part('templates/page', 'header'); ?>
-  <?php get_template_part('templates/content', 'page'); ?>
-<?php endwhile; ?>
+Timber::render('templates/page.twig', $context);

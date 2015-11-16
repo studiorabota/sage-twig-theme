@@ -1,4 +1,4 @@
 <?php
-$context['posts'] = Timber::get_posts();
+$context = Timber::get_context();
 
 Timber::render('templates/index.twig', $context);

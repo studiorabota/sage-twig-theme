@@ -1,0 +1,22 @@
+{% extends "templates/base.twig" %}
+
+{% block content %}
+
+    <div class="page-header">
+        <h1>{{ post.title }}</h1>
+    </div>
+
+    {% if posts.post_count == 0 %}
+        {{ __('Sorry, no results were found.', 'sage') }}
+        {{ function('get_search_form') }}
+    {% endif %}
+
+    {% for post in posts %}
+
+        {% include "templates/content.twig" with {post: post}  %}
+
+    {% endfor %}
+
+    {{ function('the_posts_navigation') }}
+
+{% endblock %}
