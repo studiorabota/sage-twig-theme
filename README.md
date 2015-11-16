@@ -1,79 +1,46 @@
-# Sage + Timber theme
+# Sage + Twig theme for Wordpress
 
-Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and Bootstrap Sass, that will help you make better themes. 
+Sage is a WordPress starter starter theme with a modern front-end development workflow. Twig is a modern template enging. 
 
-Timber is a plugin and theme which ... 
+The Sage + Twig starter theme combines the best of both.
 
-Sage + Timber combines the best of both.
-
-* Sage: [https://github.com/roots/sage](https://github.com/roots/sage)
-* Timber: [https://roots.io/sage/](https://roots.io/sage/)
+>Do check out the [Timber Wiki](https://github.com/jarednova/timber/wiki). It will help you to learn Twig and how to set it up with Wordpress.
 
 ## Theme installation
 
-Clone the git repo - `git clone https://github.com/roots/sage.git` and then rename the directory to the name of your theme or website.
+Clone the git repo - `git clone git@github.com:studiorabota/sage-twig-theme.git` and then rename the directory to the name of your theme or website.
 
 ## Theme setup
 
 Edit `lib/setup.php` to enable or disable theme features, setup navigation menus, post thumbnail sizes, post formats, and sidebars.
 
-## Theme development
+## Installation
 
-Sage uses [gulp](http://gulpjs.com/) as its build system and [Bower](http://bower.io/) to manage front-end packages.
+You will need:
 
-### Install gulp and Bower
-
-Building the theme requires [node.js](http://nodejs.org/download/). We recommend you update to the latest version of npm: `npm install -g npm@latest`.
+* [Gulp](http://gulpjs.com/)
+* [Bower](http://bower.io/)
+* [Composer](https://getcomposer.org/)
+* [Node](http://nodejs.org/download/) - We recommend you update to the latest version of npm: `npm install -g npm@latest`.
 
 From the command line:
 
-1. Install [gulp](http://gulpjs.com) and [Bower](http://bower.io/) globally with `npm install -g gulp bower`
 2. Navigate to the theme directory, then run `npm install`
 3. Run `bower install`
 4. Run `composer update` to install the Timber plugin
+5. Run `gulp watch`
 
 You now have all the necessary dependencies to run the build process.
 
-### Available gulp commands
+## Adding extra data to Twig
 
-* `gulp` — Compile and optimize the files in your assets directory
-* `gulp watch` — Compile assets when file changes are made
-* `gulp --production` — Compile assets for production (no source maps).
+In `lib/timber.php` you can add extra data to be used in your Twig templates. This is only for data which needs to be available site-wide, like menus, etc. 
 
-### Using BrowserSync
+You can also add data in for ex. page.php, archive.php, etc. For this you should check out the Timber documentation.
 
-To use BrowserSync during `gulp watch` you need to update `devUrl` at the bottom of `assets/manifest.json` to reflect your local development hostname.
-
-For example, if your local development URL is `http://project-name.dev` you would update the file to read:
-```json
-...
-  "config": {
-    "devUrl": "http://project-name.dev"
-  }
-...
-```
-If your local development URL looks like `http://localhost:8888/project-name/` you would update the file to read:
-```json
-...
-  "config": {
-    "devUrl": "http://localhost:8888/project-name/"
-  }
-...
-```
 
 ## Documentation
 
-Sage documentation is available at [https://roots.io/sage/docs/](https://roots.io/sage/docs/).
-
-## Contributing
-
-Contributions are welcome from everyone. We have [contributing guidelines](CONTRIBUTING.md) to help you get started.
-
-## Community
-
-Keep track of development and community news.
-
-* Participate on the [Roots Discourse](https://discourse.roots.io/)
-* Follow [@rootswp on Twitter](https://twitter.com/rootswp)
-* Read and subscribe to the [Roots Blog](https://roots.io/blog/)
-* Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
+* Sage: [https://github.com/roots/sage](https://github.com/roots/sage)
+* Twig: [http://twig.sensiolabs.org/](http://twig.sensiolabs.org/)
+* Timber: [https://github.com/jarednova/timber/wiki](https://github.com/jarednova/timber/wiki)
