@@ -40,6 +40,17 @@ In `lib/timber.php` you can add extra data to be used in your Twig templates. Th
 
 You can also add data in for ex. page.php, archive.php, etc. For this you should check out the Timber documentation.
 
+## Using BrowserSync
+
+To use BrowserSync during `gulp watch` you need to update `devUrl` at the bottom of `assets/manifest.json` to reflect your local development hostname.
+
+For example, if your local development URL is `http://project-name.dev` you would update the file to read:
+```json
+...
+  "config": {
+    "devUrl": "http://project-name.dev"
+  }
+...
 
 ## Documentation
 
