@@ -1,6 +1,6 @@
 # Sage + Twig theme for Wordpress
 
-Sage is a WordPress starter starter theme with a modern front-end development workflow. Twig is a modern template enging.
+Sage is a WordPress starter starter theme with a modern front-end development workflow. Twig is a modern template engine.
 
 The Sage + Twig starter theme combines the best of both.
 
