@@ -1,6 +1,6 @@
 # Sage + Twig theme for Wordpress
 
-Sage is a WordPress starter starter theme with a modern front-end development workflow. Twig is a modern template enging. 
+Sage is a WordPress starter starter theme with a modern front-end development workflow. Twig is a modern template engine.
 
 The Sage + Twig starter theme combines the best of both.
 
@@ -29,14 +29,15 @@ From the command line:
 3. Run `bower install`
 4. Run `composer update` to install the Timber plugin
 5. Run `gulp`
-5. Run `gulp watch`
-6. Go to Plugins in wp-admin and activate Timber
+6. Open `assets/manifest.json` and set `devUrl` to your domain name (ex. project-name.dev)
+7. Run `gulp watch`
+8. Go to Plugins in wp-admin and activate Timber
 
 You now have all the necessary dependencies to run the build process.
 
 ## Adding extra data to Twig
 
-In `lib/timber.php` you can add extra data to be used in your Twig templates. This is only for data which needs to be available site-wide, like menus, etc. 
+In `lib/timber.php` you can add extra data to be used in your Twig templates. This is only for data which needs to be available site-wide, like menus, etc.
 
 You can also add data in for ex. page.php, archive.php, etc. For this you should check out the Timber documentation.
 
