@@ -8,16 +8,16 @@
         {% include 'templates/header.twig' %}
 
         <div class="wrap container" role="document">
-            <div class="content row">
-                <main class="col-md-8">
+            <div class="content {% if display_sidebar %}row{% endif %}">
+                <main class="{% if display_sidebar %}col-md-8{% endif %}">
                     {% block content %}{% endblock %}
                 </main>
                 {% if display_sidebar %}
-                    <aside class="sidebar col-md-4">
-                        {% block sidebar %}
-                            {% include 'templates/sidebar.twig' %}
-                        {% endblock %}
-                    </aside>
+                <aside class="sidebar col-md-4">
+                    {% block sidebar %}
+                        {% include 'templates/sidebar.twig' %}
+                    {% endblock %}
+                </aside>
                 {% endif %}
             </div>
         </div>
