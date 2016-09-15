@@ -8,18 +8,30 @@
         {% include 'templates/header.twig' %}
 
         <div class="wrap container" role="document">
-            <div class="content row">
-                <main class="col-md-8">
-                    {% block content %}{% endblock %}
-                </main>
-                {% if display_sidebar %}
+            {% if display_sidebar %}
+                <div class="content row">
+                    <main class="col-md-8">
+            {% else %}
+                <div class="content">
+                    <main>
+            {% endif %}
+
+
+            {% block content %}{% endblock %}
+
+
+            {% if display_sidebar %}
+                    </main>
                     <aside class="sidebar col-md-4">
                         {% block sidebar %}
                             {% include 'templates/sidebar.twig' %}
                         {% endblock %}
                     </aside>
-                {% endif %}
-            </div>
+                </div>
+            {% else %}
+                    </main>
+                </div>
+            {% endif %}
         </div>
 
         {% include 'templates/footer.twig' %}
