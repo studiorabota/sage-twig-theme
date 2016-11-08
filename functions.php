@@ -10,7 +10,7 @@
  * @link https://github.com/roots/sage/pull/1042
  */
 $sage_includes = [
-  'lib/timber.php', 			// Twig magic
+  'lib/timber.php',    // Twig magic
   'lib/assets.php',    // Scripts and stylesheets
   'lib/extras.php',    // Custom functions
   'lib/setup.php',     // Theme setup

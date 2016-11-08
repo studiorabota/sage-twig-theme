@@ -1,5 +1,8 @@
 <?php
 use Roots\Sage\Setup;
+use Timber\Timber;
+use Timber\Site;
+use Timber\Menu;
 
 /**
  * Check if Timber is activated
@@ -8,7 +11,7 @@ use Roots\Sage\Setup;
 if ( ! class_exists( 'Timber' ) ) {
 
     add_action( 'admin_notices', function() {
-        echo '<div class="error"><p>Timber not activated. Make sure you activate the plugin in <a href="' . esc_url( admin_url( 'plugins.php#timber' ) ) . '">' . esc_url( admin_url( 'plugins.php' ) ) . '</a></p></div>';
+        echo '<div class="error"><p>Timber not library is not installed. See the <a href="https://github.com/timber/timber/wiki" target="_blank">Timber Documentation</a> for installtion instructions.</p></div>';
     } );
     return;
 
@@ -18,7 +21,7 @@ if ( ! class_exists( 'Timber' ) ) {
  * Timber
  */
 
-class TwigSageTheme extends TimberSite {
+class TwigSageTheme extends Site {
     function __construct() {
         add_filter( 'timber_context', array( $this, 'add_to_context' ) );
         parent::__construct();
@@ -29,7 +32,7 @@ class TwigSageTheme extends TimberSite {
         $context['foo'] = 'I am some other typical value set in your functions.php file, unrelated to the menu';
 
         /* Menu */
-        $context['menu'] = new TimberMenu('primary_navigation');
+        $context['menu'] = new Menu('primary_navigation');
 
         /* Site info */
         $context['site'] = $this;
